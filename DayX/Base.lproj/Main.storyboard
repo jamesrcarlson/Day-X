@@ -80,41 +80,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your entry here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ulv-Bz-PUa">
-                                <rect key="frame" x="16" y="20" width="568" height="30"/>
+                                <rect key="frame" x="122" y="20" width="357" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="357" id="Nr2-Wd-CvI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="zzB-5s-ZJd" id="F5o-Wv-Uqw"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your Entry" translatesAutoresizingMaskIntoConstraints="NO" id="jeI-Ot-A8C">
-                                <rect key="frame" x="16" y="92" width="568" height="169"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmN-rr-8TB">
-                                <rect key="frame" x="219" y="285" width="162" height="30"/>
-                                <state key="normal" title="Clear text">
-                                    <color key="titleShadowColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <rect key="frame" x="219" y="328" width="162" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="Bps-EX-grU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Clear text"/>
                                 <connections>
                                     <action selector="clearText:" destination="zzB-5s-ZJd" eventType="touchUpInside" id="Bel-5e-koG"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your Entry" translatesAutoresizingMaskIntoConstraints="NO" id="jeI-Ot-A8C">
+                                <rect key="frame" x="55" y="95" width="491" height="142"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="OmN-rr-8TB" secondAttribute="trailing" constant="203" id="9Lr-eL-DRX"/>
-                            <constraint firstItem="OmN-rr-8TB" firstAttribute="top" secondItem="jeI-Ot-A8C" secondAttribute="bottom" constant="24" id="Hzw-nm-kcI"/>
-                            <constraint firstItem="jeI-Ot-A8C" firstAttribute="leading" secondItem="Ulv-Bz-PUa" secondAttribute="leading" id="LQ4-mb-Xig"/>
-                            <constraint firstItem="Ulv-Bz-PUa" firstAttribute="top" secondItem="9W8-tg-YAY" secondAttribute="bottom" id="TIi-kY-mwd"/>
-                            <constraint firstItem="OmN-rr-8TB" firstAttribute="leading" secondItem="tC3-S4-1QC" secondAttribute="leadingMargin" constant="203" id="Wyo-gm-3q4"/>
-                            <constraint firstItem="8sj-4i-Czh" firstAttribute="top" secondItem="OmN-rr-8TB" secondAttribute="bottom" constant="241" id="eJy-k0-lRE"/>
-                            <constraint firstItem="Ulv-Bz-PUa" firstAttribute="leading" secondItem="tC3-S4-1QC" secondAttribute="leadingMargin" id="f4J-u7-Cwx"/>
-                            <constraint firstItem="jeI-Ot-A8C" firstAttribute="top" secondItem="Ulv-Bz-PUa" secondAttribute="bottom" constant="42" id="mne-y2-kZB"/>
-                            <constraint firstItem="Ulv-Bz-PUa" firstAttribute="trailing" secondItem="tC3-S4-1QC" secondAttribute="trailingMargin" id="skW-Am-exu"/>
-                            <constraint firstItem="jeI-Ot-A8C" firstAttribute="trailing" secondItem="Ulv-Bz-PUa" secondAttribute="trailing" id="tiH-iJ-zSh"/>
+                            <constraint firstItem="Ulv-Bz-PUa" firstAttribute="centerX" secondItem="tC3-S4-1QC" secondAttribute="centerX" id="0UB-bP-5F6"/>
+                            <constraint firstItem="8sj-4i-Czh" firstAttribute="top" secondItem="OmN-rr-8TB" secondAttribute="bottom" constant="198" id="BdW-FV-LUy"/>
+                            <constraint firstItem="jeI-Ot-A8C" firstAttribute="leading" secondItem="tC3-S4-1QC" secondAttribute="leadingMargin" constant="39" id="P1L-dR-iim"/>
+                            <constraint firstItem="jeI-Ot-A8C" firstAttribute="centerX" secondItem="OmN-rr-8TB" secondAttribute="centerX" id="V10-Wb-DDc"/>
+                            <constraint firstItem="jeI-Ot-A8C" firstAttribute="centerX" secondItem="Ulv-Bz-PUa" secondAttribute="centerX" id="m36-7e-Ry4"/>
+                            <constraint firstItem="Ulv-Bz-PUa" firstAttribute="top" secondItem="9W8-tg-YAY" secondAttribute="bottom" id="rJ9-4r-sYL"/>
+                            <constraint firstItem="OmN-rr-8TB" firstAttribute="top" secondItem="jeI-Ot-A8C" secondAttribute="bottom" constant="91" id="vQb-FJ-mEP"/>
+                            <constraint firstItem="jeI-Ot-A8C" firstAttribute="top" secondItem="Ulv-Bz-PUa" secondAttribute="bottom" constant="45" id="wHG-EJ-Row"/>
                         </constraints>
                     </view>
                     <connections>
